@@ -7,12 +7,10 @@
 }
 
 .nav-bar { 
-  display:flex;
-  /* <inset> | <offset-x> | <offset-y> | <blur-radius> | <spread-radius> | <color> */
   box-shadow: 0 2.98px 7.46px 0 rgba(0,0,0,.1);
-  
-  padding: 20px 30px;
+  display:flex;
   max-width: 100%;
+  padding: 20px 30px;
 
   &-logo {
     margin-right:auto;
@@ -21,44 +19,61 @@
 }
 
 section {
-  padding: 20px;
+  padding: 20px 35px;
 }
 
 .hero {
   display:flex;
   flex-direction:column;
-//   padding: 26px 0 0;
+  padding-top:26px;
+
   img {
-    // max-width:395px;
-    // padding: 0 77px;
-    max-width: 400px;
     align-self:center;
+    max-width: 400px;
   }
   &-content {
+    padding-top:32px;
     h1 {
       font-size: calc(36 / 16 * 1em);
       margin-bottom:16px;
-      /* <inset> | <offset-x> | <offset-y> | <blur-radius> | <spread-radius> | <color> */
       text-shadow: 0 4px 4px rgba(0,0,0,.25);
     }
     p {
+      font-size:16px;
+      font-weight: 300;
+      line-height:1.2;
       margin-top: 0;
-      font-weight: 400;
+      max-width:320px;
+      width:100%;
     }
   }
 }
 
+.card-carousel-container {
+  padding-right:0;
+}
 .card-carousel {
   display:flex;
   flex-wrap: nowrap;
   gap: 20px;
   justify-content: start;
   overflow-x: auto;
+  padding-bottom:20px;
 }
+
 .card {
-  align-items:center;
-  display:flex;
-  flex-direction:column;
+  display: flex;         
+  flex-direction: column;
+  flex: 0 0 auto;        
+  font-size: 12px;
+  position: relative;
+  width: 175px;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
   
   &-image {
     position:relative;
@@ -107,5 +122,11 @@ section {
     .location {
       padding:0 2px;
     }
+  }
+  &-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:176px;
   }
 }

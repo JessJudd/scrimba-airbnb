@@ -36,8 +36,10 @@ function App() {
       <main className="app">
         <NavBar />
         <Hero />
-        <section className="card-carousel">
-          {cardElements}
+        <section className="card-carousel-container">
+          <div className="card-carousel">
+            {cardElements}
+          </div>
         </section>
       </main>
     </>
@@ -45,32 +47,3 @@ function App() {
 }
 
 export default App
-
-{/* 
-
-<Card
-      title={exp.title} 
-      description={exp.description} 
-      price={exp.price} 
-      coverImg={exp.coverImg} 
-      rating={exp.stats.rating} 
-      reviewCount={exp.stats.reviewCount} 
-      location={exp.location} 
-    />
-
-<Card 
-  img={Katie} 
-  title="Life Lessons with Katie Zaferes" 
-  rating={5.0}
-  reviewCount={6}
-  location="USA"
-  price={136}
-/>
-<Card 
-  img={Katie} 
-  title="Learn wedding photography" 
-  rating={5.0}
-  reviewCount={30}
-  location="USA"
-  price={125}
-/> */}
