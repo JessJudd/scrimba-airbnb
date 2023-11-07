@@ -1,0 +1,111 @@
+#root {
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+  max-width: 550px;
+  width:100%;
+  padding-bottom:40px;
+}
+
+.nav-bar { 
+  display:flex;
+  /* <inset> | <offset-x> | <offset-y> | <blur-radius> | <spread-radius> | <color> */
+  box-shadow: 0 2.98px 7.46px 0 rgba(0,0,0,.1);
+  
+  padding: 20px 30px;
+  max-width: 100%;
+
+  &-logo {
+    margin-right:auto;
+    max-width: 100px;
+  }
+}
+
+section {
+  padding: 20px;
+}
+
+.hero {
+  display:flex;
+  flex-direction:column;
+//   padding: 26px 0 0;
+  img {
+    // max-width:395px;
+    // padding: 0 77px;
+    max-width: 400px;
+    align-self:center;
+  }
+  &-content {
+    h1 {
+      font-size: calc(36 / 16 * 1em);
+      margin-bottom:16px;
+      /* <inset> | <offset-x> | <offset-y> | <blur-radius> | <spread-radius> | <color> */
+      text-shadow: 0 4px 4px rgba(0,0,0,.25);
+    }
+    p {
+      margin-top: 0;
+      font-weight: 400;
+    }
+  }
+}
+
+.card-carousel {
+  display:flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: start;
+  overflow-x: auto;
+}
+.card {
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+  
+  &-image {
+    position:relative;
+    padding: 0;
+    margin: 0 0 9px 0;
+    width:100%;
+    img {
+      border-radius: 15px;
+      display:block;
+    }
+  }
+  &-label {
+    background-color:#fff;
+    border-radius: 3px;
+    color:#222;
+    display:inline-block;
+    font-size: 11px;
+    left: 8px;
+    padding: 6px;
+    position:absolute;
+    text-transform:uppercase;
+    top: 8px;
+  }
+  &-content {
+    font-size: 12px;
+    font-weight: 400;
+    width: 100%;
+    .custom-price {
+      font-weight: 600;
+    }
+  }
+  &-reviews {
+    align-items:center;
+    color: #918E9B;
+    display:flex;
+    .star-icon {
+      max-width:14px;
+      margin-right:2px;
+    }
+    .review-score {
+      color: #222;
+      display:inline-block;
+    }
+    .review-score, 
+    .all-reviews, 
+    .location {
+      padding:0 2px;
+    }
+  }
+}
